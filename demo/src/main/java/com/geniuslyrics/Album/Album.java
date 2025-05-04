@@ -11,4 +11,28 @@ public class Album {
     private Artist artist;
     private List<Song> songs;
     private LocalDate releaseDate;
+
+    public Album(String title, Artist artist, List<Song> songs, LocalDate releaseDate) {
+        this.title = title;
+        this.artist = artist;
+        this.songs = songs;
+        this.releaseDate = releaseDate;
+    }
+
+    // Getters
+    public String getTitle() {
+        return title;
+    }
+
+    public Artist getArtist() {
+        return artist;
+    }
+
+    public List<Song> getSongs() {
+        return songs;
+    }
+
+    public LocalDate getReleaseDate() {
+        return releaseDate;
+    }
 }
