@@ -29,4 +29,12 @@ public class User extends Account {
     public int hashCode() {
         return Objects.hash(getUsername(), getEmail());
     }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public List<Artist> getFollowedArtists() {
+        return followedArtists;
+    }
 }
