@@ -2,12 +2,12 @@ package com.geniuslyrics.Account;
 
 public abstract class Account {
     private String username;
-    private int password;
+    private String password;
     private String name;
     private int age;
     private String email;
 
-    public Account(String username, int password, String name, int age, String email) {
+    public Account(String username, String password, String name, int age, String email) {
         this.username = username;
         this.password = password;
         this.name = name;
@@ -17,5 +17,17 @@ public abstract class Account {
 
     public String getUsername() {
         return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
     }
 }

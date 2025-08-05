@@ -1,6 +1,9 @@
 package com.geniuslyrics.Song;
 
+import com.geniuslyrics.Account.Account;
+import com.geniuslyrics.Account.Admin;
 import com.geniuslyrics.Account.Artist;
+import com.geniuslyrics.Account.User;
 import com.geniuslyrics.Album.Album;
 import com.geniuslyrics.Comment.Comment;
 import com.geniuslyrics.Genre;
@@ -36,33 +39,24 @@ public class Song {
         this.viewCount++;
     }
 
+    public void setLyrics(String lyrics) {
+        this.lyrics = lyrics;
+    }
+
+    // Getters
     public int getViewCount() {
         return viewCount;
     }
 
-    public void addComment(Comment comment) {
-        comments.add(comment);
-    }
-
-    public void removeComment(Comment comment) {
-        comments.remove(comment);
+    public String getTitle () {
+        return title;
     }
 
     public List<Comment> getComments() {
         return comments;
     }
 
-    public void sortCommentsByDate() {
-        comments = comments.stream()
-                .sorted(Comparator.comparing(Comment::getTimestamp).reversed())
-                .collect(Collectors.toList());
-    }
-
     public List<Artist> getArtists() {
         return this.artists;
-    }
-
-    public void setLyrics(String lyrics) {
-        this.lyrics = lyrics;
     }
 }
